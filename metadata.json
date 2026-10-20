@@ -1,0 +1,6 @@
+{
+  "name": "KosCare - Sistem Pelaporan Kerusakan Fasilitas Kos",
+  "description": "Sistem pelaporan, pengelolaan, dan pemantauan kerusakan fasilitas kos dengan PHP Native, MySQL, dan tema pastel elegan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,413 @@
+/**
+ * KosCare - Style Sheet & CSS Variables (Dukungan Tema Dinamis & Responsif Mobile/Tablet)
+ */
+
+:root {
+    --color-pastel-lilac: #DCCEF9;
+    --color-light-lilac: #EEE7FF;
+    --color-soft-lavender: #F5F0FF;
+    --color-pure-white: #FFFFFF;
+    --color-pastel-pink: #F8DCE8;
+    --color-pastel-blue: #DCEBFF;
+    --color-charcoal: #454052;
+    --color-primary-purple: #9B82D8;
+    --color-primary-purple-hover: #886BC8;
+    --app-font-family: 'Times New Roman', Times, Georgia, serif;
+    --app-card-radius: 20px;
+    --app-btn-radius: 9999px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: var(--app-font-family) !important;
+}
+
+body {
+    background-color: var(--color-soft-lavender);
+    color: var(--color-charcoal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Background Utility Classes */
+.bg-soft-lavender { background-color: var(--color-soft-lavender) !important; }
+.bg-light-lilac { background-color: var(--color-light-lilac) !important; }
+.bg-pastel-lilac { background-color: var(--color-pastel-lilac) !important; }
+.bg-pastel-pink { background-color: var(--color-pastel-pink) !important; }
+.bg-pastel-blue { background-color: var(--color-pastel-blue) !important; }
+.bg-pure-white { background-color: var(--color-pure-white) !important; }
+
+/* Text Utility Classes */
+.text-charcoal { color: var(--color-charcoal) !important; }
+.text-primary-purple { color: var(--color-primary-purple) !important; }
+.text-taupe { color: #7b7389 !important; }
+
+/* Navbar */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-pastel-lilac);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.brand-title {
+    font-size: 1.45rem;
+    font-weight: bold;
+    color: var(--color-charcoal);
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 0.78rem;
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    font-style: italic;
+}
+
+/* Cards */
+.card-aesthetic {
+    background-color: var(--color-pure-white);
+    border-radius: var(--app-card-radius);
+    border: 1px solid var(--color-pastel-lilac);
+    box-shadow: 0 4px 18px rgba(69, 64, 82, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-aesthetic-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(69, 64, 82, 0.08);
+}
+
+/* Buttons */
+.btn-primary-purple {
+    background-color: var(--color-primary-purple);
+    color: #ffffff !important;
+    border: 1px solid var(--color-primary-purple);
+    border-radius: var(--app-btn-radius);
+    padding: 9px 22px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-primary-purple:hover, .btn-primary-purple:focus {
+    background-color: var(--color-primary-purple-hover);
+    border-color: var(--color-primary-purple-hover);
+    color: #ffffff !important;
+    opacity: 0.92;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline-purple {
+    background-color: var(--color-pure-white);
+    color: var(--color-charcoal) !important;
+    border: 1.5px solid var(--color-pastel-lilac);
+    border-radius: var(--app-btn-radius);
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-outline-purple:hover {
+    background-color: var(--color-light-lilac);
+    color: var(--color-charcoal) !important;
+    border-color: var(--color-primary-purple);
+}
+
+.btn-pastel-pink {
+    background-color: var(--color-pastel-pink);
+    color: var(--color-charcoal) !important;
+    border: 1px solid var(--color-pastel-lilac);
+    border-radius: var(--app-btn-radius);
+    padding: 9px 22px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-pastel-pink:hover {
+    filter: brightness(0.96);
+    color: var(--color-charcoal) !important;
+}
+
+.btn-pastel-blue {
+    background-color: var(--color-pastel-blue);
+    color: var(--color-charcoal) !important;
+    border: 1px solid var(--color-pastel-lilac);
+    border-radius: var(--app-btn-radius);
+    padding: 9px 22px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-pastel-blue:hover {
+    filter: brightness(0.96);
+    color: var(--color-charcoal) !important;
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 14px;
+    border: 1.5px solid var(--color-pastel-lilac);
+    padding: 10px 16px;
+    background-color: var(--color-pure-white);
+    color: var(--color-charcoal);
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primary-purple);
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.06);
+}
+
+.form-label {
+    word-break: break-word;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge-pastel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Status Badges */
+.badge-status-menunggu {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.badge-status-diproses {
+    background-color: var(--color-light-lilac);
+    color: var(--color-charcoal);
+    border: 1px solid var(--color-pastel-lilac);
+}
+
+.badge-status-info {
+    background-color: var(--color-pastel-blue);
+    color: #2b517d;
+}
+
+.badge-status-selesai {
+    background-color: #E2F0D9;
+    color: #2b542c;
+}
+
+.badge-status-ditolak {
+    background-color: #FCE8E6;
+    color: #8a332a;
+}
+
+/* Timeline */
+.timeline-track {
+    position: relative;
+    padding-left: 24px;
+}
+
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--color-pastel-lilac);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -24px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-pure-white);
+    border: 3px solid var(--color-primary-purple);
+}
+
+/* Footer */
+.footer-aesthetic {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid var(--color-pastel-lilac);
+    padding: 22px 0;
+    margin-top: auto;
+}
+
+/* =========================================================================
+   RESPONSIVITAS TABLET & HP (Mencegah teks bertumpuk, overflow, & tata letak rusak)
+   ========================================================================= */
+
+/* Tabel Responsif Halus */
+.table-responsive-aesthetic {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: calc(var(--app-card-radius) - 4px);
+    margin-bottom: 0;
+}
+
+.table-responsive-aesthetic table {
+    width: 100%;
+    min-width: 620px; /* Menjamin kolom tidak bertumpuk di HP */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-responsive-aesthetic th {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 12px 14px;
+    color: var(--color-charcoal);
+    background-color: var(--color-light-lilac);
+    border-bottom: 1.5px solid var(--color-pastel-lilac);
+}
+
+.table-responsive-aesthetic td {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: var(--color-charcoal);
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Header & Menu Responsif di HP & Tablet */
+@media (max-width: 991.98px) {
+    .navbar-custom .container,
+    .navbar-custom .container-fluid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .brand-title {
+        font-size: 1.25rem;
+    }
+
+    .navbar-collapse {
+        background-color: var(--color-pure-white);
+        border: 1px solid var(--color-pastel-lilac);
+        border-radius: 16px;
+        padding: 14px;
+        margin-top: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .navbar-nav {
+        gap: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 12px !important;
+        border-radius: 10px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background-color: var(--color-light-lilac);
+    }
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 767.98px) {
+    body {
+        font-size: 15px;
+    }
+
+    .card-aesthetic {
+        border-radius: 16px;
+        padding: 16px !important;
+    }
+
+    .brand-title {
+        font-size: 1.15rem;
+    }
+
+    .brand-tagline {
+        display: none; /* Sembunyikan tagline panjang di HP agar header rapi */
+    }
+
+    /* Tombol-tombol di HP */
+    .btn-primary-purple,
+    .btn-outline-purple,
+    .btn-pastel-pink,
+    .btn-pastel-blue {
+        padding: 8px 16px;
+        font-size: 0.88rem;
+    }
+
+    /* Formulir di HP: Stack rapi tanpa tabrakan */
+    .row.g-3 > [class*="col-"],
+    .row.g-4 > [class*="col-"] {
+        margin-bottom: 8px;
+    }
+
+    .form-control, .form-select {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Summary cards count wrap */
+    .summary-card-number {
+        font-size: 1.8rem !important;
+    }
+
+    .page-header-title {
+        font-size: 1.4rem !important;
+    }
+
+    /* Button groups stack cleanly */
+    .d-flex.gap-2.flex-wrap {
+        gap: 6px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .btn-primary-purple,
+    .btn-outline-purple {
+        width: 100%; /* Tombol aksi penuh di layar sangat kecil */
+        margin-bottom: 6px;
+    }
+}

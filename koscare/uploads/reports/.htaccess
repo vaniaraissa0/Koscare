@@ -1,0 +1,23 @@
+# Mencegah eksekusi file script (PHP, cgi, pl, dll) di folder unggahan
+# Keamanan penting untuk Apache di XAMPP Windows
+
+# Matikan engine PHP di folder ini
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Tolak akses langsung ke file selain format gambar yang diizinkan
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|php8|phar|inc|sh|bat|cmd|exe|pl|cgi)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Nonaktifkan eksekusi CGI
+Options -ExecCGI
+Options -Indexes

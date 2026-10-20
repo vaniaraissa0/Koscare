@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    font-family: 'Times New Roman', Times, Georgia, serif !important;
+  }
+
+  body {
+    background-color: #F5F0FF;
+    color: #454052;
+    min-height: 100vh;
+  }
+
+  button, input, textarea, select {
+    font-family: 'Times New Roman', Times, Georgia, serif !important;
+  }
+}
+
+:root {
+  --color-pastel-lilac: #DCCEF9;
+  --color-light-lilac: #EEE7FF;
+  --color-soft-lavender: #F5F0FF;
+  --color-pure-white: #FFFFFF;
+  --color-pastel-pink: #F8DCE8;
+  --color-pastel-blue: #DCEBFF;
+  --color-charcoal: #454052;
+  --color-primary-purple: #9B82D8;
+  --color-primary-purple-hover: #886BC8;
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCCEF9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9B82D8;
+}
